@@ -1,0 +1,279 @@
+body, html {
+    height: 100%;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap');
+
+  :root {
+    --main-color: #be9c79;
+    --black: #333;
+    --white: #fff;
+    --light-color: #666;
+    --border: 2rem solid var(var(--black));
+    --box-shadow: 0, 5rem 1rem rgba(0,0,0,.1);
+  }
+  
+  ::-webkit-scrollbar{
+    height: 05rem;
+    width: 1rem;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--black);
+  }
+  
+  .header {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+  }
+  
+  .header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem 2rem;
+  }
+  
+  .header .flex .logo img{
+    height: 4.5rem;
+  }
+  
+  .header .flex .navbar a {
+    margin-left: 2rem;
+    font-size: 2rem;
+    color:var(--black);
+    text-decoration: none;
+  }
+  
+  .header .flex .navbar a:hover {
+    text-decoration: underline;
+    color:var(--main-color);
+  }
+  
+  #menu-btn {
+    display: none;
+    font-size: 2.5rem;
+    color: var(--black);
+    cursor: pointer;
+  }
+
+  .parallax-1 {
+    /* The image used */
+    background-image: url('/img/space.jpg');
+
+    /* Full height */
+    height: 100%; 
+    margin-top: -2.10ex;
+    opacity: 0.95;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Add the blur effect */
+    filter: blur(0px);
+    -webkit-filter: blur(0.5px);
+  }
+
+  .parallax-2 {
+    height: 100%; 
+  
+    /* Text */
+    font: 3rem Source Serif Pro, serif;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Add the blur effect */
+    filter: blur(0px);
+    -webkit-filter: blur(0.5px);
+  }
+
+  .parallax-3 {
+     /* The image used */
+     background-image: url('/img/ian-schneider-PAykYb-8Er8-unsplash.jpg');  
+    
+     /* Full height */
+     height: 100%; 
+   
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ 
+     /* Add the blur effect */
+     filter: blur(95px);
+     -webkit-filter: blur(0.5px);
+  }
+
+  .btn :hover {
+    background-color: var(--black);
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--main-color);
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+  }
+
+  .readme-bar {
+    height: 60%;
+    background-color: darkgray;
+  }
+
+  .section {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+  }
+
+  .section__item {
+    scroll-snap-align: start;
+  }
+
+  .jumbotron {
+    /* background-image: url("/img/5.jpg"); */
+    background-color: #a6a6a6;
+    background-size: 100% 100%;
+    /* color: #b0bec5; */
+    margin-bottom: 0;
+    height: 60%;
+  }
+
+  .parallax-container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* hovar card */
+
+  .actu-block {
+    min-width: 600px;
+    width: fit-content;
+    padding-bottom: 1%;
+    margin-bottom: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.imag-container {
+    position: relative;
+    margin-right: 25px;
+}
+
+.cover-imgtext {
+    width: 0%;
+    position: absolute;
+    height: 200px;
+    z-index: 1;
+    opacity: 0;
+    background: rgba(48, 47, 47, 0.6);
+    transition: all 0.2s;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.actu-block:hover>div div .cover-imgtext {
+    opacity: 1;
+    width: 100%;
+}
+
+.actu-content {
+    display: flex;
+    padding: 5% 6%;
+    background: #000;
+    height: fit-content;
+    box-shadow: 0px 4px 4px rgba(27, 27, 27, 0.25);
+    border-radius: 0px 0px 60px0 0px;
+    font: 1em Source Serif Pro, serif;
+    border-radius: 0%;
+}
+
+.actu-content h1 {
+    font-weight: 700;
+    line-height: 24px;
+    color: white;
+}
+
+.actu-content p {
+    font-weight: 400;
+    line-height: 26px;
+    color: white;
+    margin-top: 5%;
+}
+
+.actu-content img {
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  #card-img {
+    width: auto; 
+    height: 25%;
+    background-size: cover;
+  }
+
+  #para1 {
+    /* white-space: nowrap;  */
+    max-width: 150ch;
+    height: 17ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .half-post-entry .img-bg, .half-post-entry .contents {
+    /* width: 50%; */
+  }
+
+  .half-post-entry .img-bg {
+    width: auto;
+    height: 25%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+  @media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+
+  .carousel {
+    width: auto;
+    max-height: 100%;
+    /* overflow: hidden; */
+    opacity: 0.50;
+    display: block;
+  }
